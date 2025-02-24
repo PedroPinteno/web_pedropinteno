@@ -1,0 +1,51 @@
+---
+import './hero.css';
+import Boton from '../atoms/Boton.astro';
+---
+
+<section class="hero">
+    <div class="hero__container">
+        <div class="text__content">
+            <h1 class="hero__title color__gradiente">Pedro Pinteño</h1>
+            <h4 class="hero__title__1">
+                <span class="color__gradiente">satruxDev</span>
+                <span class="terminal__prompt">:~$</span>
+                <span class="cursor">_</span>
+            </h4>
+            <p class="hero__text">
+                Bienvenidos a mi sitio web como Desarrollador Web junior.
+            </p>
+            <Boton 
+                href={import.meta.env.BASE_URL + '/docs/CV_Pedro_Pinteno_Gijon.pdf'} 
+                texto="Currículo" 
+                target="_blank"
+            />
+
+        </div>
+        <img
+            class="hero__img"
+            src={import.meta.env.BASE_URL + '/img/imagenHero.jpg'}
+            alt="Pedro Pinteño"
+            width="384"
+            height="384"
+        />
+
+    </div>
+</section>
+
+<style>
+.terminal__prompt {
+    color: #32CD32; /* Color verde claro */
+    margin-right: 0.2rem; /* Ajusta el espacio entre el $ y el cursor */
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+</style>

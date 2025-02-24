@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <g>
+        <!-- Flecha angular estilo ">" -->
+        <path d="M20 16L36 32L20 48" stroke="#007BFF" stroke-width="8" stroke-linecap="square" fill="none"/>
+        <!-- Guión rectangular con el mismo grosor -->
+        <rect x="20" y="52" width="24" height="8" fill="#007BFF"/>
+    </g>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            path { stroke: #00A6FF; }
+            rect { fill: #00A6FF; }
+        }
+    </style>
+</svg>

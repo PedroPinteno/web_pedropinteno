@@ -1,0 +1,68 @@
+---
+import TerminalIcon from '../../atoms/terminal-icon/TerminalIcon.astro';
+import Terminal from '../terminal/Terminal.astro';
+import './skills-on-terminal.css';
+---
+
+<Terminal nombre="jhonDoe">
+	<div class="terminal__skills">
+		<h2>Mis habilidades</h2>
+		<div class="terminal__skills__container">
+			<TerminalIcon
+				src={import.meta.env.BASE_URL + '/assets/html.svg'}
+				color="#FF4747"
+				name="HTML5"
+			/>
+			<TerminalIcon
+				src={import.meta.env.BASE_URL + '/assets/css.svg'}
+				color="#00A3FF"
+				name="CSS"
+			/>
+			<TerminalIcon
+				src={import.meta.env.BASE_URL + '/assets/typescript.svg'}
+				color="#00D1FF"
+				name="TS"
+			/>
+			<TerminalIcon 
+				src={import.meta.env.BASE_URL + '/assets/bootstrap.svg'} 
+				color="#7738ff" 
+				name="Bootstrap" 
+			/>
+			<TerminalIcon 
+				src={import.meta.env.BASE_URL + '/assets/tailwind.svg'} 
+				color="#ffffff" 
+				name="Tailwind" 
+			/>
+			<TerminalIcon 
+				src={import.meta.env.BASE_URL + '/assets/mysql.svg'} 
+				color="#00A3FF" 
+				name="MySQL" 
+			/>
+			<TerminalIcon
+				src={import.meta.env.BASE_URL + '/assets/react.svg'}
+				color="#3F75FF"
+				name="React"
+			/>
+			<TerminalIcon
+				src={import.meta.env.BASE_URL + '/assets/angular-ascii.svg'}
+				color="#ff4747"
+				name="Angular"
+			/>
+			<TerminalIcon
+				src={import.meta.env.BASE_URL + '/assets/Astro.svg'}
+				color="#FFFFFF"
+				name="Astro"
+			/>
+			<TerminalIcon
+				src={import.meta.env.BASE_URL + '/assets/nodejs.svg'}
+				color="#339933"
+				name="Node"
+			/>
+			<TerminalIcon
+				src={import.meta.env.BASE_URL + '/assets/wordpress.svg'}
+				color="#3F75FF"
+				name="Wordpress"
+			/>
+		</div>
+	</div>
+</Terminal>
