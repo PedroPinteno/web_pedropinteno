@@ -1,0 +1,55 @@
+/* Estilos del footer */
+footer {
+    width: 100%;                    /* Ancho completo */
+    background: rgb(19, 19, 19);    /* Color de fondo oscuro */
+    display: flex;                  /* Layout flexible */
+    justify-content: space-between; /* Espaciado entre elementos */
+    min-height: 20dvh;             /* Altura mínima dinámica */
+    color: var(--primary-100);     /* Color del texto */
+    align-items: center;           /* Centrado vertical */
+    padding: 1rem 4rem;            /* Espaciado interno */
+    flex-wrap: wrap;               /* Permite wrapping en móvil */
+    gap: 1rem;                     /* Espacio entre elementos */
+    h3{
+        font-size: var(--text-title); /* Tamaño de título */
+        background: linear-gradient(to right, #FFD700, #FFA500); /* Gradiente dorado */
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0px 0px 20px rgba(255, 215, 0, 0.3);
+    }
+}
+
+/* Contenedor principal del footer */
+.footer_left{
+    display: flex;                 /* Layout flexible */
+    flex-direction: column;        /* Dirección vertical */
+    align-items: flex-end;       /* Alineación: start--> a la izquierda; end--> a la derecha */
+    gap: 1rem;   
+    background: linear-gradient(to right, #FFD700, #FFA500); /* Gradiente dorado */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Enlaces del footer */
+.footer_right{
+    display: flex;                 /* Layout flexible */
+    align-items: center;           /* Centrado vertical */
+    justify-content: flex-start;   /* Alineación a la izquierda */
+    gap: 1rem;                     /* Espacio entre icono y texto */
+    font-size: var(--text-large);  /* Tamaño de texto */
+    background: linear-gradient(to right, #FFD700, #FFA500); /* Gradiente dorado */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.icons_footer_left{
+    justify-content:space-between;  
+    align-items: center;              /* Tamaño fijo */
+}
+
+.profile{
+    width: 300px;  /* Ancho fijo */
+}

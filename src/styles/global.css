@@ -1,0 +1,120 @@
+@import '../components/header/header.css';
+
+
+
+/* Variables globales del sitio */
+:root {
+    /* Paleta de colores primarios - Del más oscuro al más claro */
+    --primary-0: #190230;    /* Color base más oscuro - Fondo principal */
+    --primary-10: #2b1560;   /* Usado para textos sobre fondos claros */
+    --primary-20: #442288;   /* Usado en gradientes y elementos de fondo */
+    --primary-30: #5529ae;   /* Elementos interactivos en hover */
+    --primary-40: #6632cf;   /* Botones y elementos de acción */
+    --primary-50: #7644e3;   /* Enlaces y elementos destacados */
+    --primary-60: #8664ee;   /* Color primario principal */
+    --primary-70: #a491f4;   /* Elementos secundarios y bordes */
+    --primary-80: #c2b9f9;   /* Textos sobre fondos oscuros */
+    --primary-90: #dcd8fc;   /* Elementos de fondo claros */
+    --primary-95: #edeafd;   /* Hover estados y bordes suaves */
+    --primary-99: #f4f4fe;   /* Fondos muy claros */
+    --primary-100: #ffffff;  /* Blanco puro para textos */
+
+    /* Paleta de colores secundarios */
+    --secondary-0: #1c050e;    /* Base oscura secundaria */
+    --secondary-10: #490e25;   /* Textos sobre fondos claros */
+    --secondary-20: #782344;   /* Elementos de acento */
+    --secondary-30: #87224a;   /* Estados hover */
+    --secondary-40: #ae285f;   /* Botones secundarios */
+    --secondary-50: #c93978;   /* Enlaces secundarios */
+    --secondary-60: #dc5898;   /* Color secundario principal */
+    --secondary-70: #e77fb4;   /* Elementos decorativos */
+    --secondary-80: #f1b0d3;   /* Bordes y separadores */
+    --secondary-90: #f7d3e7;   /* Fondos claros */
+    --secondary-95: #fae9f3;   /* Estados hover suaves */
+    --secondary-99: #fcf3f8;   /* Fondos muy claros */
+    --secondary-100: #ffffff;  /* Blanco puro */
+
+    /* Variables de superficie y estados */
+    --surface: #4F4360;          /* Color base para superficies */
+    --surface-variant: #e0d8e7;  /* Variante para contraste */
+    --surface-dim: #998da9;      /* Versión atenuada */
+    --surface-bridge: #d6cdee;   /* Color puente entre superficies */
+
+    /* Variables de interacción */
+    --primary: var(--primary-60);               /* Color primario principal */
+    --on-surface-primary: var(--primary-10);    /* Texto sobre superficie primaria */
+    --on-primary: var(--primary-95);            /* Texto sobre color primario */
+    --secndary: var(--secondary-70);            /* Color secundario principal */
+    --on-surface-secondary: var(--secondary-95); /* Texto sobre superficie secundaria */
+    --on-secondary: var(--secondary-95);         /* Texto sobre color secundario */
+
+    /* Tipografía - Sistema de tamaños escalable */
+    --text-small: 1.2rem;      /* Texto pequeño: notas, etiquetas */
+    --text-medium: 1.4rem;     /* Texto medio: contenido secundario */
+    --text-large: 1.6rem;      /* Texto grande: contenido principal */
+    --text-x-large: 2rem;      /* Títulos pequeños */
+    --text-xx-large: 3.1rem;   /* Títulos medianos */
+    --text-xxx-large: 4.4rem;  /* Títulos grandes */
+    --text-title: 2rem;        /* Títulos de sección */
+    --text-general: 1.6rem;    /* Texto base del sitio */
+    --text-button: 1.2rem;     /* Texto en botones */
+
+    /* Configuración general */
+    --font-montserrat: 'Montserrat', sans-serif;  /* Fuente principal */
+    --max-width: 108rem;                          /* Ancho máximo de contenido */
+    --site-bg: var(--primary-0);                  /* Color de fondo del sitio */
+
+    /* Gradientes */
+    --hero-bg: linear-gradient(
+        -54deg,
+        var(--primary-0) -23%,
+        var(--primary-20),
+        var(--primary-0) 51%
+    );  /* Gradiente para sección hero */
+
+    --text-gradient: radial-gradient(
+        circle farthest-corner at center center,
+        /* #58f9ff 0%,
+        #df44e7 100% */
+        #FFD700 0%, 
+        #FF8C00 100%
+
+    );  /* Gradiente para textos especiales */
+}
+
+/* Reset y estilos base */
+* {
+    box-sizing: border-box;  /* Incluye padding y border en el ancho total */
+}
+
+html {
+    font-family: var(--font-montserrat) !important;  /* Fuente base */
+    font-size: 62.5%;  /* Hace que 1rem = 10px para cálculos más fáciles */
+    scroll-behavior: smooth;  /* Scroll suave entre anclas */
+}
+
+body {
+    width: 100%;  /* Ocupa todo el ancho disponible */
+    background: var(--site-bg) no-repeat;  /* Fondo sin repetición */
+}
+
+main {
+    align-self: center;  /* Centra el contenido principal */
+}
+
+p {
+    color: var(--primary-100);  /* Color de texto base */
+    font-size: var(--text-general);  /* Tamaño de texto base */
+}
+
+/* Utilidades */
+.color__gradiente {
+    background: var(--text-gradient);  /* Aplica gradiente al fondo */
+    -webkit-background-clip: text;     /* Recorta el gradiente al texto */
+    background-clip: text;             /* Soporte estándar */
+    -webkit-text-fill-color: transparent;  /* Hace el texto transparente */
+}
+
+.max__width {
+    max-width: 117.8rem;  /* Ancho máximo para contenedores */
+}

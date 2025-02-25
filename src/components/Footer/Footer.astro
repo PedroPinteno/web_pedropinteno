@@ -1,0 +1,40 @@
+---
+import Logo from '../Logo.astro';
+import SocialIcons from '../SocialIcons.astro';
+import './Footer.css';
+---
+
+<footer class="flex items-center justify-center w-full mt-8">
+
+	<div class="flex flex-col md:flex-row items-center justify-between w-full max-w-[1150px] px-4 md:px-32">
+		<div class="footer_left">
+			<Logo name="Pedro Pinteño" />
+			<SocialIcons class="icons_footer_left" width="27" height="27" />
+		</div>
+
+		<div class="footer__right">
+			
+					<a class="footer_right" href="mailto:satruxDev@gmail.com"
+						><span
+							><iconify-icon
+								icon="fluent:mail-28-regular"
+								width="27"
+								height="27"
+								style="color: #dcd8fc"></iconify-icon></span
+						>satruxDev@gmail.com</a>
+				
+					<a class="footer_right"
+						href="https://github.com/PedroPinteno"
+						target="_blank"
+						rel="nofollow noreferrer noopener"
+						><span
+						><iconify-icon
+							icon="mdi:github"
+							width="27"
+							height="27"
+							style="color: #dcd8fc"></iconify-icon></span
+					>@satruxDev</a>
+				
+		</div>
+	</div>
+</footer>

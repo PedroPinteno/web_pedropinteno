@@ -1,0 +1,32 @@
+---
+import SocialIcons from '../SocialIcons.astro';
+import Title from '../atoms/Title.astro';
+import "./about.css"
+---
+
+<section id="about" class="about">
+	<div class="about__container">
+		<img
+			class="about__img"
+			src={import.meta.env.BASE_URL + '/img/coin2.png'}
+			alt="Foto de perfil de Pedro Pinteño"
+		/>
+
+		<div class="about__content">
+			<Title margin="1rem" contenido="Sobre mí" />
+			<p class="about__text">
+				Entusiasta, constante, autodidacta y adaptable son adjetivos que me definen. 
+			</p>
+			<p class="about__text">
+				Desde siempre me ha pasionado la tecnología y he aprendido muchísimo, y ahora he tenido la oportunidad de realizarme 
+				como desarrollador web. Estoy en continuo aprendizaje ya que este mundo tecnológico me fascina. 
+				
+			</p>
+			<p class="about__text">
+				Espero poder tener la oportunidad de consolidarme  en este ámbito.
+			</p>
+			<SocialIcons width="25" height="25"/>
+		</div>
+	</div>
+
+</section>

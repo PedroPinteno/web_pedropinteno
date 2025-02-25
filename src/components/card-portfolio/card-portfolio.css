@@ -1,0 +1,174 @@
+/* Tarjeta de portfolio - Contenedor principal */
+.card__portfolio {
+    width: 310px;                /* Ancho fijo */
+    height: 320px;               /* Alto fijo */
+    overflow: hidden;            /* Oculta contenido desbordado */
+    border-radius: 22px;         /* Bordes redondeados */
+    background: #000;            /* Fondo negro */
+    position: relative;         /* Para posicionamiento absoluto de hijos */
+    /* margin: 1rem;              */
+}
+
+/* Imagen de la tarjeta */
+.card__portfolio img {
+    object-fit: cover;           /* Ajuste de imagen */
+    object-position: center 0;   /* Posición de la imagen */
+    height: 180px;               /* Alto fijo de la imagen dentro de la card*/
+    width: 352px;                /* Ancho fijo de */
+    background: #000;            /* color que se ve en la zona donde se debe ver la imagen del proyecto cuando no se carga 'negro' */
+}
+
+/* Contenedor de la descripción */
+.card__portfolio .descripcion__container {
+    position: absolute;          /* Posicionamiento absoluto */
+    display: flex;               /* Layout flexible */
+    flex-direction: column;      /* Dirección vertical */
+    height: 100%;               /* Alto completo */
+    width: 100%;                /* Ancho completo */
+    top: 0;                     /* Alineado arriba */
+    transition: 0.35s;          /* Transición suave */
+    background: #231724;        /* Color de fondo */
+    transform: translateY(63%);  /* Posición inicial */
+    padding-top: 15px;          /* Espaciado superior */
+    transition-property: transform, padding-top;  /* Propiedades animadas */
+    color: var(--on-primary);   /* Color del texto */
+}
+
+/* Efecto hover en el contenedor de descripción */
+.card__portfolio:hover .descripcion__container {
+    transform: translateY(0%);   /* Muestra completa al hover */
+    padding-top: 55px;          /* Ajusta padding superior */
+}
+
+/* Título de la tarjeta */
+.card__portfolio .descripcion__container .card__title {
+    position: absolute;          /* Posicionamiento absoluto */
+    display: block;              /* Display block */
+    width: max-content;          /* Ancho según contenido */
+    top: 0;                      /* Alineado arriba */
+    padding: 4px 22px;           /* Espaciado interno */
+    font-size: var(--text-title); /* Tamaño de texto */
+    font-weight: 500;            /* Peso de la fuente */
+    background: #0008;           /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    z-index: 2;                  /* Sobre otros elementos */
+    transform: translateY(-100%); /* Posición inicial */
+    border-radius: 0 8px 0 0;    /* Bordes redondeados */
+    transition-duration: 0.35s;   /* Duración de transición */
+    transition-property: background, transform; /* Propiedades animadas */
+}
+
+/* Efecto hover en el título */
+.card__portfolio:hover .descripcion__container .card__title {
+    transform: translateY(11%);   /* Nueva posición en hover */
+    backdrop-filter: none;        /* Sin desenfoque */
+    background: #0000;           /* Fondo transparente */
+}
+
+/* Contenedor de descripción */
+.card__portfolio .descripcion {
+    padding: 0 22px;             /* Espaciado interno */
+    display: flex;               /* Layout flexible */
+    width: 100%;                /* Ancho completo */
+    height: 100%;               /* Alto completo */
+    flex-direction: column;      /* Dirección vertical */
+    gap: 10px;                  /* Espacio entre elementos */
+}
+
+/* Párrafo de descripción */
+.card__portfolio .descripcion p {
+    font-size: var(--text-medium);  /* Tamaño de texto */
+    white-space: nowrap;            /* Sin saltos de línea */
+    overflow: hidden;               /* Oculta desbordamiento */
+    text-overflow: ellipsis;        /* Muestra elipsis */
+    height: 40px;                   /* Alto inicial */
+    transition: 0.35s height;       /* Transición de altura */
+}
+
+/* Efecto hover en el párrafo */
+.card__portfolio:hover .descripcion p {
+     /* Permite scroll */
+    overflow: scroll;                
+    white-space: wrap;              /* Permite wrapping */
+    height: 120px;                   /* Aumenta altura */
+    max-height: 120px;               /* Altura máxima */
+}
+
+/* Estilo de la barra de scroll */
+.card__portfolio .descripcion p::-webkit-scrollbar {
+    width: 4px;                     /* Ancho de la barra */
+    background: var(--surface);     /* Color de fondo */
+    border-radius: 4px;             /* Bordes redondeados */
+}
+
+/* Estilo del thumb de scroll */
+.card__portfolio .descripcion p::-webkit-scrollbar-thumb {
+    width: 2px;                     /* Ancho del thumb */
+    background: var(--primary);     /* Color del thumb */
+    border-radius: 4px;             /* Bordes redondeados */
+}
+
+/* Contenedor de habilidades iconos de las cards html css etc*/
+.card__portfolio .skills {
+    display: flex;                  /* Layout flexible */
+    gap: 10px;                      /* Espacio entre elementos */
+    font-size: 4rem;               /* Tamaño de iconos de las cards html css*/
+}
+
+/* Asegurar que las imágenes tengan el mismo tamaño que los íconos */
+.card__portfolio .skills img.skill-icon {
+    width: 4rem;                   /* Tamaño igual al de los íconos */
+    height: 4rem;                  /* Mantener la proporción */
+    object-fit: contain;           /* Ajusta la imagen sin distorsionarla */
+    border-radius: 15%;            /* Esquinas redondeadas (círculo) */
+
+}
+/* Botones de acción */
+.card__portfolio .buttons {
+    padding: 14px;                  /* Espaciado interno */
+    width: 100%;                   /* Ancho completo */
+    height: 47px;                  /* Alto fijo */
+    box-sizing: border-box;        /* Incluye padding en ancho y alto */
+    display: flex;                 /* Layout flexible */
+    justify-content: center;       /* Centrado horizontal */
+    gap: 22px;                     /* Espacio entre elementos */
+    /* font-size: var(--text-button); /* Tamaño de texto */
+    font-size: 1.5rem;  
+           /* Tamaño de texto 'github*/
+}
+
+/* Enlaces de acción */
+.card__portfolio .buttons a {
+    position: relative;            /* Para efecto de subrayado */
+}
+
+/* Efecto hover en enlaces */
+.card__portfolio .buttons a:hover {
+    color: var(--primary-80);      /* Color en hover */
+}
+
+/* Subrayado en enlaces */
+.card__portfolio .buttons a::after {
+    position: absolute;            /* Posicionamiento absoluto */
+    bottom: 0;                     /* Alineado abajo */
+    left: 0;                       /* Alineado izquierda */
+    content: '';                   /* Contenido vacío */
+    height: 2px;                   /* Alto del subrayado */
+    width: 100%;                  /* Ancho completo */
+    transform-origin: 0 0;        /* Origen de la transformación */
+    transform: scale(0);           /* Escala inicial */
+    background: var(--primary);    /* Color del subrayado */
+    transition: 0.35s transform;   /* Transición de escala */
+}
+
+/* Efecto hover en subrayado */
+.card__portfolio .buttons a:hover::after {
+    transform: scale(1);           /* Escala final */
+}
+
+/* Contenido de enlaces */
+.card__portfolio .buttons a span {
+    display: flex;                 /* Layout flexible */
+    align-items: center;           /* Centrado vertical */
+    gap: 4px;                      /* Espacio entre elementos */
+}

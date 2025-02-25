@@ -1,0 +1,113 @@
+/* Estilos de la sección hero */
+.hero {
+    padding: 6rem 2.2rem 0 2.2rem;   /* Espaciado superior e interno */
+    width: 100%;                     /* Ancho completo */
+    height: 100vh;                   /* Altura completa de la ventana */
+    min-height: 100dvh;              /* Altura mínima dinámica */
+    background-size: 200%;           /* Tamaño inicial del fondo para animación */
+    display: flex;                   /* Layout flexible */
+    flex-direction: column;          /* Dirección vertical */
+    color: var(--on-primary);        /* Color del texto */
+    background: var(--hero-bg);      /* Gradiente de fondo */
+    animation: presentation 3s linear forwards;  /* Animación inicial */
+    align-items: center;             /* Centrado vertical */
+    flex-wrap: wrap-reverse;         /* Wrap inverso en móvil */
+    position: relative;              /* Para el pseudo-elemento */
+    justify-content: center;         /* Centrado horizontal */
+}
+
+/* Efecto de degradado en la parte inferior */
+.hero::after {
+    content: '';                    /* Necesario para pseudo-elementos */
+    position: absolute;             /* Posicionamiento absoluto */
+    height: 6rem;                   /* Altura del degradado */
+    width: 100%;                    /* Ancho completo */
+    background: linear-gradient(0deg, var(--primary-0), #0000);  /* Degradado */
+    bottom: 0;                      /* Alineado al fondo */
+}
+
+/* Imagen del hero */
+.hero .hero__img {
+    width: 100%;                    /* Ancho completo */
+    max-width: 38rem;               /* Ancho máximo */
+    border-radius: 50%;             /* Forma circular */
+    height: auto;                   /* Altura proporcional */
+}
+
+/* Contenedor principal del hero */
+.hero .hero__container {
+    display: grid;                  /* Layout grid */
+    grid-template-columns: 1fr auto;  /* Dos columnas */
+    width: 100%;                    /* Ancho completo */
+    max-width: var(--max-width);    /* Ancho máximo */
+    gap: 8rem;                      /* Espacio entre elementos */
+}
+
+/* Texto del hero */
+.hero .hero__text {
+    font-size: var(--text-xx-large);  /* Tamaño de fuente grande */
+}
+
+/* Contenedor del texto */
+.hero__container .text__content {
+    font-weight: 600;               /* Peso de la fuente */
+    display: flex;                  /* Layout flexible */
+    flex-direction: column;         /* Dirección vertical */
+    justify-content: center;        /* Centrado vertical */
+    gap: 4rem;                      /* Espacio entre elementos */
+}
+
+/* Título principal */
+.hero__container .text__content .hero__title {
+    font-size: var(--text-xxx-large);     /* Tamaño de fuente más grande */
+    line-height: var(--text-xxx-large);   /* Altura de línea */
+}
+
+/* Párrafo del título */
+.hero__container .hero__title p {
+    font-size: var(--text-x-large);    /* Tamaño de fuente */
+    font-weight: normal;               /* Peso de la fuente normal */
+    color: var(--primary-90);          /* Color del texto */
+    max-width: 80%;                    /* Ancho máximo */
+}
+
+.hero__container .hero__title__1 {
+    font-size: var(--text-x-large); 
+}
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 12rem 0 5rem 0;     /* Ajuste de padding */
+    }
+    .hero .hero__img {
+        max-width: 28rem;            /* Imagen más pequeña */
+    }
+    .hero .hero__container {
+        display: flex;               /* Cambia a flexbox */
+        max-width: 100%;             /* Ancho completo */
+        gap: 0;                      /* Sin espacio entre elementos */
+        flex-direction: column-reverse;  /* Orden inverso */
+        justify-content: center;      /* Centrado vertical */
+        align-items: center;          /* Centrado horizontal */
+    }
+    .hero .text__content {
+        align-items: center;          /* Centrado de texto */
+    }
+    .hero .hero__text {
+        font-size: var(--text-x-large);  /* Texto más pequeño */
+        text-align: center;              /* Texto centrado */
+    }
+}
+
+/* Animación de presentación */
+@keyframes presentation {
+    0% {
+        background-size: 200%;        /* Tamaño inicial */
+    }
+    50% {
+        background-position: 70%;     /* Posición media */
+    }
+    100% {
+        background-size: 100%;        /* Tamaño final */
+    }
+}

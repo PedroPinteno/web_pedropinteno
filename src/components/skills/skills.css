@@ -1,0 +1,28 @@
+/* Sección de habilidades */
+#skills {
+    display: flex;                                    /* Layout flexible */
+    max-width: calc(var(--max-width) + 2.2rem);      /* Ancho máximo con padding */
+    padding: 1.1rem;                                 /* Espaciado interno */
+    gap: 2.2rem;                                     /* Espacio entre elementos */
+    margin: 4rem auto;                               /* Margen vertical y centrado */
+}
+
+/* Contenedor de texto en la sección de habilidades */
+#skills .text-content {
+    max-width: 40%;                                  /* Ancho máximo del texto */
+    flex: 1;                                         /* Crecimiento flexible */
+    display: flex;                                   /* Layout flexible */
+    flex-direction: column;                          /* Dirección vertical */
+    justify-content: center;                         /* Centrado vertical */
+    gap: 1.1rem;                                     /* Espacio entre elementos */
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+    #skills {
+        flex-direction: column-reverse;              /* Cambio a dirección vertical inversa */
+    }
+    #skills .text-content {
+        max-width: 100%;                            /* Ancho completo en móvil */
+    }
+}

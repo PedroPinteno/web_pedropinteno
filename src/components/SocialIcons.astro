@@ -1,0 +1,81 @@
+---
+const {width, height} = Astro.props;
+const socialLinks = [
+	{
+		title: 'LinkedIn',
+		icon: 'simple-icons:linkedin',
+		href: 'https://www.linkedin.com/in/pedro-pinteno/',
+
+	},
+	{
+		title: 'Instagram',
+		icon: 'mdi:instagram',
+		href: 'https://www.instagram.com/satruxdev/',
+
+	},
+	// {
+	// 	title: 'Twitter',
+	// 	icon: 'ri:twitter-x-fill',
+	// 	href: 'https://twitter.com/satruxdev',
+
+	// },
+	{
+		title: 'CV',
+		icon: 'tabler:file-cv',
+		href: '../docs/cv_pedro_pinteno.pdf',
+
+	},
+];
+---
+<!-- solo actua sobre los iconosdel footerdel lado izquierdo -->
+<div class="icons__container">
+    {
+        socialLinks.map((data) => (
+            <a
+                href={data.href}
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+            >
+                <iconify-icon
+					class=`skill__icon ${data.title}`
+                    icon={data.icon}
+                    width={width}
+                    height={height}
+                />
+            </a>
+        ))
+    }
+</div>
+
+<style>
+	.icons__container {
+		display: flex;
+        width: auto;              /* Ajustarse al contenido */
+        padding: 1.3rem 0;        /* Eliminar padding horizontal */
+        gap: 2rem;
+		width: 300px;  /* Ancho fijo */
+    }
+	
+
+    
+
+	.skill__icon{
+		color:#dcd8fc;
+	}
+
+	.LinkedIn:hover{
+		color: #0e76a8;
+	}
+	.Instagram:hover{
+		color: #E1306C;
+	}
+	.Twitter:hover{
+		color: #0aa5f6;
+	}
+	.CV:hover{
+		color:#8e64ff;
+	}
+
+
+	
+</style>
