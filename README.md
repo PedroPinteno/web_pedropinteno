@@ -1,4 +1,4 @@
-# Portfolio – Pedro Pinteño
+﻿# Portfolio – Pedro Pinteño
 
 Portfolio personal desarrollado con Astro, orientado a perfil **Técnico IT Junior / Soporte ERP**, con experiencia en **SAP Business One, SQL Server, Git y Jira**.
 
@@ -53,7 +53,21 @@ El objetivo de este portfolio es:
 
 Para ejecutar el proyecto en entorno local:
 
-```bash
+\\\ash
 npm install
 npm run dev
+\\\
 
+---
+
+## Créditos
+
+Este proyecto se basa en la plantilla original de **SofiDev / Garrux** disponible en [portfolio-astrosofidev-garrux](https://github.com/SofiDevO/portfolio-astrosofidev-garrux).
+
+La plantilla ha sido modificada y adaptada para el perfil técnico y profesional de Pedro Pinteño.
+
+---
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Ver el archivo \LICENSE\ para más detalles.

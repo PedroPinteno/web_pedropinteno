@@ -23,7 +23,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SofiDevO/portfolio-astrosofidev-garrux.git"
+    "url": "git+https://github.com/PedroPinteno/web_pedropinteno.git"
   },
   "keywords": [
     "astro",
@@ -35,10 +35,11 @@
     "css",
     "tailwind"
   ],
-  "author": "SofiDev / Garrux",
+  "author": "Pedro Pinteño",
+  "contributors": ["SofiDev / Garrux"],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SofiDevO/portfolio-astrosofidev-garrux/issues"
+    "url": "https://github.com/PedroPinteno/web_pedropinteno/issues"
   },
-  "homepage": "https://github.com/SofiDevO/portfolio-astrosofidev-garrux#readme"
+  "homepage": "https://github.com/PedroPinteno/web_pedropinteno#readme"
 }
