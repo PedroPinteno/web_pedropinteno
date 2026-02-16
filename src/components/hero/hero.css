@@ -74,6 +74,25 @@
 .hero__container .hero__title__1 {
     font-size: var(--text-x-large); 
 }
+
+/* Etiqueta de sección */
+.hero__container .text__content .hero__label {
+    font-size: var(--text-small);
+    font-weight: 500;
+    color: var(--primary-70);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+/* Subtítulo */
+.hero__container .text__content .hero__subtitle {
+    font-size: var(--text-xx-large);
+    font-weight: 600;
+    color: var(--on-primary);
+    margin: 0;
+}
+
 /* Estilos responsive */
 @media screen and (max-width: 768px) {
     .hero {

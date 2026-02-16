@@ -6,15 +6,20 @@ import Boton from '../atoms/Boton.astro';
 <section class="hero">
     <div class="hero__container">
         <div class="text__content">
-            <h1 class="hero__title color__gradiente">Pedro Pinteño</h1>
-            <h4 class="hero__title__1">
-                <span class="color__gradiente">satruxDev</span>
-                <span class="terminal__prompt">:~$</span>
-                <span class="cursor">_</span>
-            </h4>
-            <p class="hero__text">
-                Bienvenidos a mi sitio web como Desarrollador Web junior.
-            </p>
+            <div>
+                <p class="hero__label">Título</p>
+                <h1 class="hero__title color__gradiente">Pedro Pinteño</h1>
+            </div>
+            <div>
+                <p class="hero__label">Subtítulo</p>
+                <h2 class="hero__subtitle">Técnico IT Junior / Soporte ERP</h2>
+            </div>
+            <div>
+                <p class="hero__label">Descripción</p>
+                <p class="hero__text">
+                    Experiencia en SAP Business One, SQL Server, Git y Jira en entorno empresarial.
+                </p>
+            </div>
             <Boton 
                 href={import.meta.env.BASE_URL + '/docs/CV_Pedro_Pinteno_Gijon.pdf'} 
                 texto="Currículo" 
